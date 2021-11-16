@@ -1,0 +1,24 @@
+{
+  "name": "lab01_05",
+  "version": "1.0.0",
+  "description": "This is the test for learning Git and Node",
+  "main": "index.html ",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madnessTroy/LAB01_03.git"
+  },
+  "author": "madnessTroy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madnessTroy/LAB01_03/issues"
+  },
+  "homepage": "https://github.com/madnessTroy/LAB01_03#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
