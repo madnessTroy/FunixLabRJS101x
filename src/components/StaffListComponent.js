@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"; //bootstrap
-import { Card, CardTitle, CardText } from "reactstrap"; // reactstrap
+import { Card, CardTitle, CardText, NavItem } from "reactstrap"; // reactstrap
 import dateFormat from "dateformat"; //dateformat
 
 class StaffListComponent extends React.Component {
@@ -16,6 +16,15 @@ class StaffListComponent extends React.Component {
         this.setState({selectedStaff: staff})
     }
 
+    renderDepartment (department) {
+        if (department == null) {
+            return (<div></div>)
+        }
+        else {
+            <div></div>
+        }
+    }
+
     renderStaffInfo(staff) {
         if (staff != null) {
             return (
@@ -24,7 +33,7 @@ class StaffListComponent extends React.Component {
                         <CardTitle>Họ và tên: {staff.name}</CardTitle>
                         <CardText>Ngày sinh: {dateFormat(staff.doB, "dd/mm/yyyy")}</CardText>
                         <CardText>Ngày vào công ty: {dateFormat(staff.startDate, "dd/mm/yyyy")}</CardText>
-                        <CardText>Phòng ban: {staff.department[this.props.departments.name]}</CardText>
+                        <CardText>Phòng ban: {staff.department.name}</CardText>
                         <CardText>Số ngày nghỉ còn: {staff.annualLeave}</CardText>
                         <CardText>Số ngày đã làm thêm: {staff.overTime}</CardText>
                     </Card>
