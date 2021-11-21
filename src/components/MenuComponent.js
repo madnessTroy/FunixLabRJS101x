@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import DishDetail from './DishdetailComponent';
 
 class Menu extends React.Component {
 
@@ -11,24 +13,23 @@ class Menu extends React.Component {
         }
     }
 
-    onDishSelect(dish) {
-        this.setState({selectedDish: dish});
-    }
-
     renderDish(dish) {
         if (dish != null) {
-            return(
+            return (
                 <Card>
+                    <div className="col-12 col-md-5 m-1">
                     <CardImg width="100%" src={dish.image} alt={dish.name} />
                     <CardBody>
                         <CardTitle>{dish.name}</CardTitle>
                         <CardText>{dish.description}</CardText>
                     </CardBody>
+                    </div>
                 </Card>
             );
-        } else {
+        }
+        else {
             return (
-                <div>Please select at least 1 dish</div>
+                <div></div>
             );
         }
     }
@@ -36,7 +37,7 @@ class Menu extends React.Component {
     render() {
         const menu = this.props.dishes.map((dish) => {
             return (
-              <div key={dish.id} className="col-12 col-md-5 m-1">
+                <div key={dish.id} className="col-12 col-md-5 m-1">
                 <Card onClick={() => this.onDishSelect(dish)}>
                     <CardImg width="100%" src={dish.image} alt={dish.name} />
                   <CardImgOverlay>
@@ -48,14 +49,19 @@ class Menu extends React.Component {
         });
 
         return (
-          <div className="container">
-            <div className="row">
-                {menu}
+            <div className="container">
+                <div className="row">
+                    <div className="col-6">
+                        {menu}
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-6">
+                        {this.renderDish(this.state.selectedDish)}
+                        <DishDetail dish={this.state.selectedDish}/>
+                    </div>
+                </div>
             </div>
-            <div className="row">
-                {this.renderDish(this.state.selectedDish)}
-            </div>
-          </div>
         );
     }
 }
