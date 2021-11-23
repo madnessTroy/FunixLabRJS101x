@@ -16,15 +16,6 @@ class StaffListComponent extends React.Component {
         this.setState({selectedStaff: staff})
     }
 
-    renderDepartment (department) {
-        if (department == null) {
-            return (<div></div>)
-        }
-        else {
-            <div></div>
-        }
-    }
-
     renderStaffInfo(staff) {
         if (staff != null) {
             return (
