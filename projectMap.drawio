@@ -1,0 +1,307 @@
+<mxfile host="65bd71144e">
+    <diagram id="LV9_-rGvCDYi14f78EeH" name="Home">
+        <mxGraphModel dx="1139" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Logo" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=23;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="173" y="20" width="87" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Phòng ban" style="whiteSpace=wrap;html=1;fontSize=17;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="20" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Bảng lương" style="whiteSpace=wrap;html=1;fontSize=17;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="20" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="91" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="13" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="34" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="37" target="38" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="40" target="41" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="43" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="46" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="49" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="405" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="52" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="edgeStyle=none;html=1;fontSize=17;sketch=1;" parent="1" source="55" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="Footer&lt;br&gt;" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;sketch=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="610" width="810" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="Rh4C0DtiXNMuDJYVeA87" name="Info nhân viên">
+        <mxGraphModel dx="1328" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="5yeoVrQrAcPR2FIIpvsV-0"/>
+                <mxCell id="5yeoVrQrAcPR2FIIpvsV-1" parent="5yeoVrQrAcPR2FIIpvsV-0"/>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-0" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=23;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="20" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-1" value="Nhân viên" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="173" y="20" width="87" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-2" value="Phòng ban" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="290" y="20" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-3" value="Bảng lương" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="420" y="20" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-4" value="Link/ ...NV" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="60" y="91" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-5" value="Hình ảnh nhân viên" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="55" y="180" width="235" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="mHbnLSyk6xPTlPP7nOwF-6" value="Thông tin nhân viên&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="390" y="180" width="210" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="T1HHlXfv3gW0yUMCSG1q-0" value="Footer&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="5yeoVrQrAcPR2FIIpvsV-1">
+                    <mxGeometry x="20" y="450" width="810" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="wjRbZZWkJNG5iRARIBvu" name="Phòng ban ">
+        <mxGraphModel dx="1139" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="-2Ng-QILOpK0Hc8JdXjF-0"/>
+                <mxCell id="-2Ng-QILOpK0Hc8JdXjF-1" parent="-2Ng-QILOpK0Hc8JdXjF-0"/>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-0" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=23;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="20" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-1" value="Nhân viên" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="173" y="20" width="87" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-2" value="Phòng ban" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="290" y="20" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-3" value="Bảng lương" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="420" y="20" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-5" value="Phòng ban" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="60" y="160" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-6" value="Link/... Phòng ban&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="60" y="91" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-25" value="Phòng ban" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="640" y="160" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-26" value="Phòng ban" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="355" y="160" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-27" value="Phòng ban" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="360" y="370" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cq7XNOuLPH0kYYIhkDTg-28" value="Phòng ban" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="60" y="370" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="aJ6Glp5pa8bVUoR3LUSK-0" value="Footer&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="-2Ng-QILOpK0Hc8JdXjF-1">
+                    <mxGeometry x="20" y="580" width="810" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="-3cvA6qCz7OytJ_isGyZ" name="Bảng lương">
+        <mxGraphModel dx="1139" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="8d9Yz5ddD4iW5Gt6s29m-0"/>
+                <mxCell id="8d9Yz5ddD4iW5Gt6s29m-1" parent="8d9Yz5ddD4iW5Gt6s29m-0"/>
+                <mxCell id="u891WQ2lOepayki1ZKRA-0" value="Logo" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=23;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="20" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-1" value="Nhân viên" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="173" y="20" width="87" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-2" value="Phòng ban" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="290" y="20" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-3" value="Bảng lương" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="420" y="20" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-4" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-5" target="u891WQ2lOepayki1ZKRA-7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-5" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="60" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-6" value="Nhân viên/ ... Bảng lương" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="60" y="91" width="210" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-7" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="50" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-8" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-9" target="u891WQ2lOepayki1ZKRA-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-9" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="230" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-10" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="220" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-11" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-12" target="u891WQ2lOepayki1ZKRA-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-12" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="400" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-13" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="390" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-14" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-15" target="u891WQ2lOepayki1ZKRA-16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-15" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="560" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-16" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="550" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-17" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-18" target="u891WQ2lOepayki1ZKRA-19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-18" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="720" y="170" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-19" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="710" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-20" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-21" target="u891WQ2lOepayki1ZKRA-22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-21" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="60" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-22" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="50" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-23" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-24" target="u891WQ2lOepayki1ZKRA-25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-24" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="230" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-25" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="220" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-26" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-27" target="u891WQ2lOepayki1ZKRA-28">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-27" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="405" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-28" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="395" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-29" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-30" target="u891WQ2lOepayki1ZKRA-31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-30" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="570" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-31" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="560" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-32" value="" style="edgeStyle=none;html=1;fontSize=17;" edge="1" parent="8d9Yz5ddD4iW5Gt6s29m-1" source="u891WQ2lOepayki1ZKRA-33" target="u891WQ2lOepayki1ZKRA-34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-33" value="Hình nhân viên&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="730" y="390" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-34" value="Tên nhân viên" style="whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="720" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="u891WQ2lOepayki1ZKRA-35" value="Footer&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;strokeWidth=2;" vertex="1" parent="8d9Yz5ddD4iW5Gt6s29m-1">
+                    <mxGeometry x="30" y="610" width="810" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
