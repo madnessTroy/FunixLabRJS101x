@@ -4,15 +4,17 @@ import { Card, CardTitle, CardText, Breadcrumb, BreadcrumbItem } from "reactstra
 import { Link } from "react-router-dom"
 
 function RenderSalary({staff}) {
-    CalSalary (staff.salaryScale, staff.overTime)
-    console.log(CalSalary());
+    let employeeSalary = CalSalary (staff.salaryScale, staff.overTime)
+
     return (
         <Card className="p-3">
-            <CardTitle className="text-center bg-info">{staff.name}</CardTitle>
+            <Link to={`/staff/${staff.id}`}>
+                <CardTitle className="text-center bg-info">{staff.name}</CardTitle>
+            </Link>
             <CardText>Mã nhân viên: {staff.id}</CardText>
             <CardText>Hệ số lương: {staff.salaryScale}</CardText>
             <CardText>Số giờ làm thêm: {staff.overTime}</CardText>
-            <CardText>Lương: <CalSalary /></CardText>
+            <CardText>Lương: {employeeSalary}</CardText>
         </Card>
     )
 }
@@ -20,10 +22,8 @@ function RenderSalary({staff}) {
 function CalSalary(x, y) {
     let salary = 5000000
     let total = salary * x * y
-    //console.log(typeof total);
     return total;
 }
-
 
 function Salary(props) {
     const salaryList = props.staffs.map((staff) => {
@@ -38,16 +38,18 @@ function Salary(props) {
     return (
         <React.Fragment>
             <div className="container-fluid">
-                <Breadcrumb>
+                <Breadcrumb className="pt-3">
                     <BreadcrumbItem>
                         <Link to="/staff">Nhân viên</Link>
                     </BreadcrumbItem>
 
                     <BreadcrumbItem>
-                        Bảng lương
+                        <b>Bảng lương</b>
                     </BreadcrumbItem>
                 </Breadcrumb>
             </div>
+
+            <hr />
 
             <div className="container">
                 <div className="row">

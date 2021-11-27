@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Nav, Navbar, NavbarBrand, NavItem, NavLink, NavbarToggler, Collapse } from "reactstrap"
+import { Nav, Navbar, NavbarBrand, NavItem, NavbarToggler, Collapse } from "reactstrap"
 import { Link } from "react-router-dom"
 
 import "font-awesome/css/font-awesome.min.css"
@@ -8,34 +8,33 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 class Header extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            isNavOpen: false
-        }
-
-        this.toggleNav = this.toggleNav.bind(this)
+          isOpen: false
+        };
+        this.toggle = this.toggle.bind(this);
     }
 
-    toggleNav() {
+    toggle() {
         this.setState({
-            isNavOpen: !this.state.isNavOpen
-        })
-    }
+          isOpen: !this.state.isOpen
+        });
+      }
 
     render() {
         return (
             <React.Fragment>
                 <Navbar expand="md" className="bg-info" dark>
                     <div className="container-fluid header">
+                        <NavbarToggler onClick={this.toggle} className="bg-danger" />
 
-                        <NavbarToggler onClick={this.toggleNav} />
+                        <NavbarBrand className="mr-auto">
+                            <img src="assets/images/logo.png" alt="logo" height="70" width="100" />
+                        </NavbarBrand>
 
-                            <NavbarBrand>
-                                <img src="assets/images/logo.png" alt="logo" width="100%" />
-                            </NavbarBrand>
+                        <Collapse isOpen={this.state.isOpen} navbar>
 
-                            <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
                                     <Link to="/staff">
@@ -45,17 +44,18 @@ class Header extends React.Component {
 
                                 <NavItem>
                                     <Link to="/department">
-                                        <h3 className="fa fa-address-card"></h3>Phòng ban
+                                        <span className="fa fa-address-card"></span>Phòng ban
                                     </Link>
                                 </NavItem>
 
                                 <NavItem>
                                     <Link to="/salary">
-                                        <h3 className="fa fa-money"></h3>Bảng lương
+                                        <span className="fa fa-money"></span>Bảng lương
                                     </Link>
                                 </NavItem>
                             </Nav>
                         </Collapse>
+
                     </div>
                 </Navbar>
             </React.Fragment >

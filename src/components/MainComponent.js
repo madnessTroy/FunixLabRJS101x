@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from 'react-router'
 
 import Header from './HeaderComponent'
 import StaffList from './StaffListComponent'
+import StaffDetail from './StaffDetailComponent'
 import Department from './DepartmentComponent'
 import Salary from './SalaryComponent'
 import Footer from './FooterComponent'
@@ -32,12 +33,21 @@ class Main extends React.Component {
             )
         }
 
+        const StaffWithId = ({match}) => {
+            return (
+                <StaffDetail
+                    staff = {this.state.staffs.filter((staff) => staff.id === parseInt(match.params.staffId))[0]}
+                />
+            )
+        }
+
         return (
             <div>
                 <Header />
 
                 <Switch>
                     <Route exact path="/staff" component={() => <StaffList staffs={this.state.staffs} />} />
+                    <Route path="/staff/:staffId" component={ StaffWithId } />
                     <Route path="/department" component={ DepartmentPage } />
                     <Route path="/salary" component={ SalaryPage } />
                 </Switch>
