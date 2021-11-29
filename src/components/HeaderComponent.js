@@ -68,9 +68,7 @@ class Header extends Component {
                             <div className="col-12 col-sm-6">
                                 <h1> Ristorante Con Fusion </h1>
                                 <p>
-                                    We take inspiration from te World's best cuisines, and create a unique
-                                    fusion experience. Our lipsmacking creations
-                                    will ti ckle your culinary senses!
+                                    We take inspiration from te World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!
                                 </p>
                             </div>
                         </div>
