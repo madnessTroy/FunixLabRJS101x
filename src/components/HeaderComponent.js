@@ -26,19 +26,19 @@ class Header extends Component {
 
     toggleModal() {
         this.setState({
-            isModalOpen: !this.state.isModalOpen
+            isModalOpen: !this.isModalOpen
         })
     }
 
-    handleLogin(e) {
-
+    handleLogin(event) {
+        event.preventDefault()
         this.toggleModal()
 
         alert("Username: " + this.username.value +
-              "| Password: " + this.password.value +
-              "| Remember: " + this.remember.checked)
+        "| Password: " + this.password.value +
+        "| Remember: " + this.remember.checked)
 
-        e.preventDefault()
+
     }
 
     render() {
@@ -81,7 +81,7 @@ class Header extends Component {
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}>
+                                    <Button outline onClick={this.toggleModal} color="light">
                                         <span className="fa fa-user-login fa-lg"></span>Login
                                     </Button>
                                 </NavItem>
@@ -105,7 +105,7 @@ class Header extends Component {
                 <Modal isOpen = {this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
-                        <Form onSubmit={this.handleLogin}>
+                        <Form onSubmit={this.state.handleLogin}>
                             <FormGroup>
                                 <Label htmlFor="username">Username: </Label>
                                 <Input type="text" id="username" name="username"
