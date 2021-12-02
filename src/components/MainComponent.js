@@ -11,7 +11,6 @@ import DishDetail from './DishdetailComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from "react-redux"
 
-
 const mapStateToProps = state => {
     return {
         dishes: state.dishes,
