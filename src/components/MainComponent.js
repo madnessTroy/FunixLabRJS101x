@@ -15,18 +15,6 @@ import { PROMOTIONS } from '../shared/promotions'
 
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-<<<<<<< HEAD
-const mapStateToProps = state => {
-    return {
-        dishes: state.dishes,
-        comments: state.comments,
-        promotions: state.promotions,
-        leaders: state.leaders
-    }
-}
-=======
-
->>>>>>> parent of c11aa00 (Add files for LAB07_01)
 class Main extends Component {
 
     constructor(props) {
