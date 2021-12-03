@@ -11,14 +11,14 @@ class Header extends React.Component {
         super(props);
 
         this.state = {
-          isOpen: false
+          isNavOpen: false
         };
-        this.toggle = this.toggle.bind(this);
+        this.toggleNav = this.toggleNav.bind(this);
     }
 
-    toggle() {
+    toggleNav() {
         this.setState({
-          isOpen: !this.state.isOpen
+          isNavOpen: !this.state.isNavOpen
         });
       }
 
@@ -27,13 +27,13 @@ class Header extends React.Component {
             <React.Fragment>
                 <Navbar expand="md" className="bg-info" dark>
                     <div className="container-fluid header">
-                        <NavbarToggler onClick={this.toggle} className="bg-danger" />
+                        <NavbarToggler onClick={this.toggleNav} className="bg-danger" />
 
                         <NavbarBrand className="mr-auto">
                             <img src="assets/images/logo.png" alt="logo" height="70" width="100" />
                         </NavbarBrand>
 
-                        <Collapse isOpen={this.state.isOpen} navbar>
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
 
                             <Nav navbar>
                                 <NavItem>
@@ -55,7 +55,6 @@ class Header extends React.Component {
                                 </NavItem>
                             </Nav>
                         </Collapse>
-
                     </div>
                 </Navbar>
             </React.Fragment >
