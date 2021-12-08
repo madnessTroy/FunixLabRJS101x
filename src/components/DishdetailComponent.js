@@ -3,6 +3,7 @@ import { Card, CardImg, CardTitle, Breadcrumb, BreadcrumbItem, CardBody, CardTex
 import { Link } from 'react-router-dom';
 
 import CommentModal from "./CommentModalComponent";
+import { addComment } from "../redux/ActionCreators";
 
 function RenderDish({ dish }) {
     if (dish != null) {
@@ -25,7 +26,7 @@ function RenderDish({ dish }) {
     }
 }
 
-function RenderComments({ dish, comments }) {
+function RenderComments({ comments, addComment, dishId }) {
     if (comments == null) {
         return (<div></div>)
     }
@@ -50,7 +51,7 @@ function RenderComments({ dish, comments }) {
                 {cmnts}
             </ul>
 
-            <CommentModal dish={dish} comments={comments} />
+            <CommentModal dishId={dishId} addComment={addComment} />
 
         </div>
     )
@@ -86,7 +87,10 @@ const DishDetail = (props) => {
 
             <div className='row'>
                 <RenderDish dish={props.dish} />
-                <RenderComments comments={props.comments} />
+                <RenderComments comments={props.comments}
+                        addComment={props.addComment}
+                        dishId={props.dish.id}
+                />
             </div>
         </div>
     )

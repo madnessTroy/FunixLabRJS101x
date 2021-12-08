@@ -37,6 +37,16 @@ class CommentModal extends React.Component {
         })
     }
 
+    handleSubmitComment(values) {
+        this.toggleModal();
+        this.props.addComment(
+            this.props.dishId,
+            values.rating,
+            values.author,
+            values.comment
+        );
+    }
+
     render() {
         return (
             <div>
