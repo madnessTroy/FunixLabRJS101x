@@ -74,7 +74,7 @@ class Contact extends React.Component {
                         <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
                             {/* First Name */}
                             <Row className="form-group">
-                                <Label htmlFor=".firstName" md={2}> First Name: </Label>
+                                <Label htmlFor="firstName" md={2}> First Name: </Label>
                                 <Col md={10}>
                                     <Control.text model=".firstName" name="firstName" id="firstName"
                                             placeholder="First Name"
