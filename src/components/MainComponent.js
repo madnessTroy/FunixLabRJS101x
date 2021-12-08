@@ -41,18 +41,29 @@ class Main extends React.Component {
             )
         }
 
+        const addStaff = (staff) => {
+            const newStaff = this.state.staffs.concat([staff])
+            this.setState({ staffs: newStaff })
+            localStorage.setItem("staffs", JSON.stringify(newStaff))
+        }
+
         return (
             <div>
                 <Header />
 
                 <Switch>
-                    <Route exact path="/staff" component={() => <StaffList staffs={this.state.staffs} />} />
+                    <Route exact path="/staff" component={() =>
+                        <StaffList staffs={this.state.staffs}
+                                    addStaff={addStaff}
+                        />}
+                    />
+
                     <Route path="/staff/:staffId" component={ StaffWithId } />
                     <Route path="/department" component={ DepartmentPage } />
                     <Route path="/salary" component={ SalaryPage } />
                 </Switch>
 
-                <Redirect to="/staff" />
+                {/* <Redirect to="/staff" /> */}
                 <Footer />
             </div>
         )
