@@ -2,6 +2,8 @@ import React from "react";
 import { Card, CardImg, CardTitle, Breadcrumb, BreadcrumbItem, CardBody, CardText } from "reactstrap";
 import { Link } from 'react-router-dom';
 
+import CommentModal from "./CommentModalComponent";
+
 function RenderDish({ dish }) {
     if (dish != null) {
         return (
@@ -23,7 +25,7 @@ function RenderDish({ dish }) {
     }
 }
 
-function RenderComments({ comments }) {
+function RenderComments({ dish, comments }) {
     if (comments == null) {
         return (<div></div>)
     }
@@ -32,7 +34,6 @@ function RenderComments({ comments }) {
             <li key={comment.id}>
                 <p>{comment.comment}</p>
                 <p>-- {comment.author},
-                    &nbsp;
                     {new Intl.DateTimeFormat('en-US', {
                         year: 'numeric',
                         month: 'long',
@@ -48,6 +49,8 @@ function RenderComments({ comments }) {
             <ul className='list-unstyled'>
                 {cmnts}
             </ul>
+
+            <CommentModal dish={dish} comments={comments} />
 
         </div>
     )
