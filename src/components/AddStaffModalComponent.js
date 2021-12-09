@@ -7,7 +7,6 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len)
 const minLength = (len) => (val) => (val) && (val.length >= len)
-
 class AddStaffModal extends React.Component {
   constructor(props) {
     super(props);
@@ -177,7 +176,7 @@ class AddStaffModal extends React.Component {
                     onChange={this.handleInputChange}
                     validators={{ required }}
                   >
-                    <option></option>
+                    <option>Vui lòng chọn</option>
                     <option value="sale">Sale</option>
                     <option value="Marketing">Marketing</option>
                     <option value="it">IT</option>
@@ -207,6 +206,7 @@ class AddStaffModal extends React.Component {
                     className="form-control"
                     name="salaryScale"
                     id="salaryScale"
+                    placeholder="1.0 -> 3.0"
                     value={this.state.salaryScale}
                     onChange={this.handleInputChange}
                     validators={{ required }}
@@ -216,7 +216,7 @@ class AddStaffModal extends React.Component {
                     className="text-danger"
                     show="touched"
                     messages={{
-                      required: "Yêu cầu nhập!",
+                      required: "Yêu cầu nhập!"
                     }}
                   />
                 </Col>

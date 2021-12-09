@@ -40,20 +40,12 @@ class StaffList extends React.Component {
 
   render() {
     const { search } = this.state;
-    const staffs = this.props.staffs
+    console.log(this.props.staffs);
 
-    const filteredStaff = staffs.filter((staff) => {
+    const filteredStaff = this.props.staffs.filter((staff) => {
       return staff.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
 
-    const staffList = staffs.map((staff) => {
-        return (
-            <div key={staff.id}>
-                <renderStaff />
-            </div>
-        )
-    })
-    console.log(staffs);
     return (
       <div className="container-fluid">
         <div className="row pt-3">
@@ -62,7 +54,7 @@ class StaffList extends React.Component {
           </div>
 
           <div className="col-lg-4 col-sm-8">
-            <AddStaffModal addStaff={addStaff} />
+            <AddStaffModal addStaff={addStaff}  />
           </div>
 
         {/* Tìm nhân viên */}
@@ -80,10 +72,6 @@ class StaffList extends React.Component {
         </div>
 
         <hr />
-
-        <div className="row">
-            { staffList }
-        </div>
 
         <div className="row">
           {filteredStaff.map((staff) => {

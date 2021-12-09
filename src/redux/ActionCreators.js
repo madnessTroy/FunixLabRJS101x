@@ -10,7 +10,6 @@ export const addStaff = (staffId, fullName, doB, startDate, department, salarySc
         department: department,
         salaryScale: salaryScale,
         annualLeave: annualLeave,
-        overTime: overTime,
-        image: "/assets/images/alberto.png"
+        overTime: overTime
     }
 })
