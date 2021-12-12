@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import CommentModal from "./CommentModalComponent";
 import { addComment } from "../redux/ActionCreators";
+import { Loading } from "./LoadingComponent"
 
 function RenderDish({ dish }) {
     if (dish != null) {
@@ -59,9 +60,26 @@ function RenderComments({ comments, addComment, dishId }) {
 
 
 const DishDetail = (props) => {
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        )
+    }
+    if (props.errMsg) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <h4>{props.errMsg}</h4>
+                </div>
+            </div>
+        )
+    }
 
     const dish = props.dish
-
 
     if (dish == null) {
         return (<div></div>);
