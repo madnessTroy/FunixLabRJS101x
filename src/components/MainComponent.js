@@ -2,7 +2,7 @@ import React from "react";
 
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { addStaff } from "../redux/ActionCreators";
+import { addStaff, fetchStaffs } from "../redux/ActionCreators";
 
 import Header from "./HeaderComponent";
 import StaffList from "./StaffListComponent";
@@ -19,23 +19,15 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	addStaff: (staffId, fullName, doB, startDate, department, salaryScale, annualLeave, overTime) =>
-		dispatch(
-			addStaff(
-				staffId,
-				fullName,
-				doB,
-				startDate,
-				department,
-				salaryScale,
-				annualLeave,
-				overTime
-			)
-		),
+	addStaff: (name, doB, startDate, department, salaryScale, annualLeave, overTime) =>
+		dispatch(addStaff(name, doB, startDate, department, salaryScale, annualLeave, overTime)),
+	fetchStaffs: () => {
+		dispatch(fetchStaffs());
+	},
 });
 class Main extends React.Component {
-	constructor(props) {
-		super(props);
+	componentDidMount() {
+		this.props.fetchStaffs();
 	}
 
 	render() {
@@ -51,7 +43,7 @@ class Main extends React.Component {
 			return (
 				<StaffDetail
 					staff={
-						this.props.staffs.filter(
+						this.props.staffs.staffs.filter(
 							(staff) => staff.id === parseInt(match.params.staffId)
 						)[0]
 					}
@@ -68,7 +60,12 @@ class Main extends React.Component {
 						exact
 						path="/staff"
 						component={() => (
-							<StaffList staffs={this.props.staffs} addStaff={this.props.addStaff} />
+							<StaffList
+								staffs={this.props.staffs.staffs}
+								addStaff={this.props.addStaff}
+								staffsLoading={this.props.staffs.isLoading}
+								staffsErrMsg={this.props.staffs.errMsg}
+							/>
 						)}
 					/>
 

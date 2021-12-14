@@ -49,7 +49,7 @@ function StaffDetail(props) {
 
 				<div className="container">
 					<div className="row">
-						<RenderStaff staff={props.staff} />
+						<RenderStaff staff={staff} />
 					</div>
 				</div>
 			</React.Fragment>

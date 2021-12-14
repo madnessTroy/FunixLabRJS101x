@@ -1,11 +1,22 @@
 import React from "react";
 
-import { Card, CardImg, CardTitle, FormGroup, Input } from "reactstrap";
+import { Card, CardImg, CardTitle, Form, Col, FormGroup, Input } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
 import AddStaffModal from "./AddStaffModalComponent";
-import { addStaff } from "../redux/ActionCreators";
+import { Loading } from "./LoadingComponent";
+
+function RenderStaff({ staff }) {
+	return (
+		<Card className="col-lg-2 col-md-3 col-sm-6 g-2">
+			<Link to={`/staff/${staff.id}`}>
+				<CardImg src={staff.image} width="100%" />
+				<CardTitle className="text-center">{staff.name}</CardTitle>
+			</Link>
+		</Card>
+	);
+}
 class StaffList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -15,28 +26,24 @@ class StaffList extends React.Component {
 		};
 	}
 
-	onChange = (e) => {
+	handleSearchStaff = (e) => {
 		this.setState({ search: e.target.value });
-	};
-
-	renderStaff = (staff) => {
-		return (
-			<div className="col-lg-2 col-md-4 col-sm-6 g-3">
-				<Card>
-					<Link to={`/staff/${staff.id}`}>
-						<CardImg src={staff.image} width="100%" />
-						<CardTitle className="text-center">{staff.name}</CardTitle>
-					</Link>
-				</Card>
-			</div>
-		);
 	};
 
 	render() {
 		const { search } = this.state;
-		console.log(this.props.staffs);
+		const staffs = this.props.staffs;
 
-		const filteredStaff = this.props.staffs.filter((staff) => {
+		// Spinner to wait for loading StaffList
+		if (this.props.staffsLoading) {
+			return <Loading />;
+			// Handle loading fail
+		} else if (this.props.staffsErrMsg) {
+			return <h3>{this.props.staffErrMsg}</h3>;
+		}
+
+		// Map the staff list to render view
+		const filteredStaff = staffs.filter((staff) => {
 			return staff.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
 		});
 
@@ -48,18 +55,27 @@ class StaffList extends React.Component {
 					</div>
 
 					<div className="col-lg-4 col-sm-8">
-						<AddStaffModal addStaff={addStaff} />
+						<AddStaffModal
+							addStaff={this.props.addStaff}
+							departments={this.props.departments}
+						/>
 					</div>
 
 					{/* Tìm nhân viên */}
-					<div className="col-lg-3 col-sm-12">
-						<FormGroup>
-							<Input
-								type="text"
-								placeholder="Tìm kiếm nhân viên..."
-								onChange={this.onChange}
-							/>
-						</FormGroup>
+					<div className="col-lg-4 col-sm-12">
+						<Form onSubmit={this.handleSearchStaff}>
+							<FormGroup row>
+								<Col>
+									<Input
+										type="text"
+										id="search"
+										name="search"
+										placeholder="Nhập để tìm nhân viên . . ."
+										onChange={this.handleSearchStaff}
+									/>
+								</Col>
+							</FormGroup>
+						</Form>
 					</div>
 				</div>
 
@@ -67,7 +83,7 @@ class StaffList extends React.Component {
 
 				<div className="row">
 					{filteredStaff.map((staff) => {
-						return this.renderStaff(staff);
+						return RenderStaff({ staff });
 					})}
 				</div>
 			</div>

@@ -43,8 +43,7 @@ class AddStaffModal extends React.Component {
 	handleAddStaff(values) {
 		// get input values
 		this.props.addStaff(
-			this.props.staffId,
-			values.fullName,
+			values.name,
 			values.doB,
 			values.startDate,
 			values.department,
@@ -52,7 +51,6 @@ class AddStaffModal extends React.Component {
 			values.annualLeave,
 			values.overTime
 		);
-
 		// clear input and close modal
 		this.toggleModal();
 	}
@@ -60,8 +58,8 @@ class AddStaffModal extends React.Component {
 	render() {
 		return (
 			<div>
-				<Button color="primary" onClick={this.toggleModal}>
-					<b className="fs-4 p-3">+</b>
+				<Button className="mb-3" color="primary" onClick={this.toggleModal}>
+					<b className="fs-5"> Thêm nhân viên</b>
 				</Button>
 
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
@@ -73,16 +71,16 @@ class AddStaffModal extends React.Component {
 						<LocalForm onSubmit={(values) => this.handleAddStaff(values)}>
 							{/* Họ và tên */}
 							<Row className="form-group">
-								<Label htmlFor="fullName" md={12}>
-									Họ và tên:{" "}
+								<Label htmlFor="name" md={12}>
+									Họ và tên:
 								</Label>
 								<Col md={12}>
 									<Control.text
-										model=".fullName"
+										model=".name"
 										className="form-control"
-										name="fullName"
-										id="fullName"
-										value={this.state.fullName}
+										name="name"
+										id="name"
+										value={this.state.name}
 										onChange={this.handleInputChange}
 										validators={{
 											required,
@@ -92,7 +90,7 @@ class AddStaffModal extends React.Component {
 									></Control.text>
 									<Errors
 										className="text-danger"
-										model=".fullName"
+										model=".name"
 										show="touched"
 										messages={{
 											required: "Yêu cầu nhập! |",
@@ -173,11 +171,11 @@ class AddStaffModal extends React.Component {
 										validators={{ required }}
 									>
 										<option>Vui lòng chọn</option>
-										<option value="sale">Sale</option>
-										<option value="Marketing">Marketing</option>
-										<option value="it">IT</option>
-										<option value="finance">Finance</option>
-										<option value="hr">HR</option>
+										<option>Sale</option>
+										<option>Marketing</option>
+										<option>IT</option>
+										<option>Finance</option>
+										<option>HR</option>
 									</Control.select>
 									<Errors
 										className="text-danger"
