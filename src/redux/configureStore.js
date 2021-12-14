@@ -3,11 +3,11 @@ import { Staffs } from "./staffs";
 import { Departments } from "./department";
 
 export const configureStore = () => {
-    const store = createStore (
-        combineReducers({
-            staffs: Staffs,
-            departments: Departments
-        })
-    )
-    return store
-}
+	const store = createStore(
+		combineReducers({
+			staffs: Staffs,
+			departments: Departments,
+		})
+	);
+	return store;
+};
