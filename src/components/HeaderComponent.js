@@ -30,25 +30,25 @@ class Header extends React.Component {
 						<NavbarToggler onClick={this.toggleNav} className="bg-danger" />
 
 						<NavbarBrand className="mr-auto">
-							<img src="assets/images/logo.png" alt="logo" height="70" width="100" />
+							<img src="asset/images/logo.png" alt="logo" height="70" width="100" />
 						</NavbarBrand>
 
 						<Collapse isOpen={this.state.isNavOpen} navbar>
 							<Nav navbar>
 								<NavItem>
-									<Link to="/staff">
+									<Link to="/staffs">
 										<span className="fa fa-users"></span>Nhân viên
 									</Link>
 								</NavItem>
 
 								<NavItem>
-									<Link to="/department">
+									<Link to="/departments">
 										<span className="fa fa-address-card"></span>Phòng ban
 									</Link>
 								</NavItem>
 
 								<NavItem>
-									<Link to="/salary">
+									<Link to="/staffsSalary">
 										<span className="fa fa-money"></span>Bảng lương
 									</Link>
 								</NavItem>

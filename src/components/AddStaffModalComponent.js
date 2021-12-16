@@ -1,5 +1,5 @@
+// General
 import React from "react";
-
 import { Modal, ModalBody, ModalHeader, Button, Row, Col, Label } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 
@@ -51,7 +51,9 @@ class AddStaffModal extends React.Component {
 			values.annualLeave,
 			values.overTime
 		);
+
 		// clear input and close modal
+		this.props.resetAddStaffModal();
 		this.toggleModal();
 	}
 
@@ -170,12 +172,11 @@ class AddStaffModal extends React.Component {
 										onChange={this.handleInputChange}
 										validators={{ required }}
 									>
-										<option>Vui lòng chọn</option>
-										<option>Sale</option>
-										<option>Marketing</option>
-										<option>IT</option>
-										<option>Finance</option>
-										<option>HR</option>
+										<option value="Dept01">Sale</option>
+										<option value="Dept02">HR</option>
+										<option value="Dept03">Marketing</option>
+										<option value="Dept04">IT</option>
+										<option value="Dept05">FinanceR</option>
 									</Control.select>
 									<Errors
 										className="text-danger"

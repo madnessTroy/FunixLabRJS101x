@@ -1,12 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
+// General
+import React from "react";
 import dateFormat from "dateformat";
-
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
-import React from "react";
 
-function RenderStaff({ staff }) {
+function RenderStaff({ staff, departments }) {
+	let departmentName = "";
+	departments.map((department) => {
+		if (staff.departmentId === department.id) {
+			departmentName = department.name;
+		}
+	});
+
 	return (
 		<React.Fragment>
 			<div className="col-4">
@@ -17,7 +22,7 @@ function RenderStaff({ staff }) {
 				<h4>{staff.name}</h4>
 				<p>Ngày sinh: {dateFormat(staff.doB, "dd/mm/yyyy")}</p>
 				<p>Ngày vào công ty: {dateFormat(staff.startDate, "dd/mm/yyyy")}</p>
-				<p>Phòng ban: {staff.department.name}</p>
+				<p>Phòng ban: {departmentName}</p>
 				<p>Số ngày nghỉ còn lại: {staff.annualLeave}</p>
 				<p>Số ngày đã làm thêm: {staff.overTime}</p>
 			</div>
@@ -27,6 +32,7 @@ function RenderStaff({ staff }) {
 
 function StaffDetail(props) {
 	const staff = props.staff;
+	const departments = props.departments;
 
 	if (staff == null) {
 		return <div></div>;
@@ -36,7 +42,7 @@ function StaffDetail(props) {
 				<div className="container-fluid">
 					<Breadcrumb className="pt-3">
 						<BreadcrumbItem>
-							<Link to="/staff">Nhân viên</Link>
+							<Link to="/staffs">Nhân viên</Link>
 						</BreadcrumbItem>
 
 						<BreadcrumbItem>
@@ -49,7 +55,7 @@ function StaffDetail(props) {
 
 				<div className="container">
 					<div className="row">
-						<RenderStaff staff={staff} />
+						<RenderStaff staff={staff} departments={departments} />
 					</div>
 				</div>
 			</React.Fragment>

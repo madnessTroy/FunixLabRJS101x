@@ -34,10 +34,15 @@ export const Staffs = (
 			};
 
 		case ActionTypes.ADD_STAFF:
-			var staff = action.payload;
-			staff.id = state.length;
-			staff.image = "/assets/images/alberto.png";
-			return state.staffs.concat([staff]);
+			let newStaff = action.payload;
+			newStaff.id = state.staffs.length;
+			newStaff.image = "/asset/images/alberto.png";
+			return {
+				...state,
+				isLoading: false,
+				errMsg: null,
+				staffs: [...state.staffs, newStaff],
+			};
 
 		default:
 			return state;

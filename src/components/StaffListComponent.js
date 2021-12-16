@@ -9,8 +9,8 @@ import { Loading } from "./LoadingComponent";
 
 function RenderStaff({ staff }) {
 	return (
-		<Card className="col-lg-2 col-md-3 col-sm-6 g-2">
-			<Link to={`/staff/${staff.id}`}>
+		<Card className="col-lg-2 col-md-3 col-sm-6">
+			<Link to={`/staffs/${staff.id}`}>
 				<CardImg src={staff.image} width="100%" />
 				<CardTitle className="text-center">{staff.name}</CardTitle>
 			</Link>
@@ -53,15 +53,16 @@ class StaffList extends React.Component {
 					<div className="col-lg-4 col-sm-3">
 						<h3>NHÂN VIÊN</h3>
 					</div>
-
+					{/* Add staff form */}
 					<div className="col-lg-4 col-sm-8">
 						<AddStaffModal
-							addStaff={this.props.addStaff}
 							departments={this.props.departments}
+							addStaff={this.props.addStaff}
+							resetAddStaffModal={this.props.resetAddStaffModal}
 						/>
 					</div>
 
-					{/* Tìm nhân viên */}
+					{/* Find staffs input */}
 					<div className="col-lg-4 col-sm-12">
 						<Form onSubmit={this.handleSearchStaff}>
 							<FormGroup row>

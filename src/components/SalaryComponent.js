@@ -8,7 +8,7 @@ function RenderSalary({ staff }) {
 
 	return (
 		<Card className="p-3">
-			<Link to={`/staff/${staff.id}`}>
+			<Link to={`/staffs/${staff.id}`}>
 				<CardTitle className="text-center bg-info">{staff.name}</CardTitle>
 			</Link>
 			<CardText>Mã nhân viên: {staff.id}</CardText>
@@ -39,7 +39,7 @@ function Salary(props) {
 			<div className="container-fluid">
 				<Breadcrumb className="pt-3">
 					<BreadcrumbItem>
-						<Link to="/staff">Nhân viên</Link>
+						<Link to="/staffs">Nhân viên</Link>
 					</BreadcrumbItem>
 
 					<BreadcrumbItem>
