@@ -30,7 +30,7 @@ class Header extends React.Component {
 						<NavbarToggler onClick={this.toggleNav} className="bg-danger" />
 
 						<NavbarBrand className="mr-auto">
-							<img src="asset/images/logo.png" alt="logo" height="70" width="100" />
+							<img src="/asset/images/logo.png" alt="logo" height="70" width="100" />
 						</NavbarBrand>
 
 						<Collapse isOpen={this.state.isNavOpen} navbar>

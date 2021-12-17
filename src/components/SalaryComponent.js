@@ -3,58 +3,57 @@ import React from "react";
 import { Card, CardTitle, CardText, Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
-function RenderSalary({ staff }) {
-	let employeeSalary = CalSalary(staff.salaryScale, staff.overTime);
+import { Loading } from "./LoadingComponent";
 
+function RenderSalary({ staff }) {
 	return (
-		<Card className="p-3">
+		<Card className="p-3 m-2">
 			<Link to={`/staffs/${staff.id}`}>
-				<CardTitle className="text-center bg-info">{staff.name}</CardTitle>
+				<CardTitle className="text-center bg-info text-white">{staff.name}</CardTitle>
 			</Link>
 			<CardText>Mã nhân viên: {staff.id}</CardText>
 			<CardText>Hệ số lương: {staff.salaryScale}</CardText>
 			<CardText>Số giờ làm thêm: {staff.overTime}</CardText>
-			<CardText>Lương: {employeeSalary}</CardText>
+			<CardText>Lương: {staff.salary}</CardText>
 		</Card>
 	);
 }
 
-function CalSalary(x, y) {
-	let salary = 5000000;
-	let total = salary * x * y;
-	return total;
-}
-
 function Salary(props) {
-	const salaryList = props.staffs.map((staff) => {
+	const salaryList = props.staffsSalary.map((d) => {
 		return (
-			<div key={staff.id} className="col-lg-4 col-md-6 g-4">
-				<RenderSalary staff={staff} />
+			<div key={d.id} className="col-lg-4 col-md-6 g-4">
+				<RenderSalary staff={d} />
 			</div>
 		);
 	});
 
-	return (
-		<React.Fragment>
-			<div className="container-fluid">
-				<Breadcrumb className="pt-3">
-					<BreadcrumbItem>
-						<Link to="/staffs">Nhân viên</Link>
-					</BreadcrumbItem>
+	if (props.salaryLoading) {
+		return <Loading />;
+	} else if (props.salaryFailed) {
+		return <h3>{props.salaryErrMsg}</h3>;
+	} else
+		return (
+			<React.Fragment>
+				<div className="container-fluid">
+					<Breadcrumb className="pt-3">
+						<BreadcrumbItem>
+							<Link to="/staffs">Nhân viên</Link>
+						</BreadcrumbItem>
 
-					<BreadcrumbItem>
-						<b>Bảng lương</b>
-					</BreadcrumbItem>
-				</Breadcrumb>
-			</div>
+						<BreadcrumbItem>
+							<b>Bảng lương</b>
+						</BreadcrumbItem>
+					</Breadcrumb>
+				</div>
 
-			<hr />
+				<hr />
 
-			<div className="container">
-				<div className="row">{salaryList}</div>
-			</div>
-		</React.Fragment>
-	);
+				<div className="container">
+					<div className="row">{salaryList}</div>
+				</div>
+			</React.Fragment>
+		);
 }
 
 export default Salary;

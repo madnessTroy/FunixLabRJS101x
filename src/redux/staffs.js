@@ -9,14 +9,6 @@ export const Staffs = (
 	action
 ) => {
 	switch (action.type) {
-		case ActionTypes.ADD_STAFFS:
-			return {
-				...state,
-				isLoading: false,
-				errMsg: null,
-				staffs: action.payload,
-			};
-
 		case ActionTypes.STAFFS_LOADING:
 			return {
 				...state,
@@ -31,6 +23,14 @@ export const Staffs = (
 				isLoading: false,
 				errMsg: action.payload,
 				staffs: [],
+			};
+
+		case ActionTypes.ADD_STAFFS:
+			return {
+				...state,
+				isLoading: false,
+				errMsg: null,
+				staffs: action.payload,
 			};
 
 		case ActionTypes.ADD_STAFF:

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, CardTitle, CardText } from "reactstrap";
+import { Card, CardTitle } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import { Loading } from "./LoadingComponent";
@@ -13,9 +13,9 @@ function RenderDepartment({ department }) {
 					<h2>{department.name}</h2>
 				</CardTitle>
 			</Link>
-			<CardText className="p-3">
+			<p className="p-3">
 				<span>Số lượng nhân viên: {department.numberOfStaff}</span>
-			</CardText>
+			</p>
 		</Card>
 	);
 }
@@ -26,7 +26,7 @@ class Department extends React.Component {
 			return <Loading />;
 			// Handle loading fail
 		} else if (this.props.departmentsErrMsg) {
-			return <h3>{this.props.staffErrMsg}</h3>;
+			return <h3>{this.props.departmentsErrMsg}</h3>;
 		}
 
 		const DepartmentList = this.props.departments.map((department) => {

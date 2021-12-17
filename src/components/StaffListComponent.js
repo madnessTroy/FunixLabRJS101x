@@ -56,8 +56,9 @@ class StaffList extends React.Component {
 					{/* Add staff form */}
 					<div className="col-lg-4 col-sm-8">
 						<AddStaffModal
+							staffs={this.props.staffs}
 							departments={this.props.departments}
-							addStaff={this.props.addStaff}
+							postStaff={this.props.postStaff}
 							resetAddStaffModal={this.props.resetAddStaffModal}
 						/>
 					</div>

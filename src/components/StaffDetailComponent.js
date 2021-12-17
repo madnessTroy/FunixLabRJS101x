@@ -4,6 +4,9 @@ import dateFormat from "dateformat";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
+import UpdateStaffModal from "./UpdateStaffModalComponent";
+import DeleteStaffModal from "./DeleteStaffModalComponent";
+
 function RenderStaff({ staff, departments }) {
 	let departmentName = "";
 	departments.map((department) => {
@@ -11,7 +14,6 @@ function RenderStaff({ staff, departments }) {
 			departmentName = department.name;
 		}
 	});
-
 	return (
 		<React.Fragment>
 			<div className="col-4">
@@ -46,7 +48,7 @@ function StaffDetail(props) {
 						</BreadcrumbItem>
 
 						<BreadcrumbItem>
-							<b>{props.staff.name}</b>
+							<b>{staff.name}</b>
 						</BreadcrumbItem>
 					</Breadcrumb>
 				</div>
@@ -56,6 +58,20 @@ function StaffDetail(props) {
 				<div className="container">
 					<div className="row">
 						<RenderStaff staff={staff} departments={departments} />
+					</div>
+				</div>
+				<div className="container mt-3">
+					<div className="row">
+						<div className="col-2">
+							<UpdateStaffModal
+								staff={staff}
+								patchStaff={props.patchStaff}
+								resetAddStaffModal={props.resetAddStaffModal}
+							/>
+						</div>
+						<div className="col-2">
+							<DeleteStaffModal deletedStaff={props.deletedStaff} staff={staff} />
+						</div>
 					</div>
 				</div>
 			</React.Fragment>
