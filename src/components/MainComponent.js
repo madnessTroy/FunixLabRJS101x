@@ -3,7 +3,7 @@ import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { actions } from "react-redux-form";
-
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 // actions of Staffs page
 import {
 	postStaff,
@@ -105,30 +105,32 @@ class Main extends React.Component {
 		return (
 			<React.Fragment>
 				<Header />
-
-				<Switch>
-					<Route
-						exact
-						path="/staffs"
-						component={() => (
-							<StaffList
-								staffs={this.props.staffs.staffs}
-								departments={this.props.departments.departments}
-								postStaff={this.props.postStaff}
-								resetAddStaffModal={this.props.resetAddStaffModal}
-								staffsLoading={this.props.staffs.isLoading}
-								staffsErrMsg={this.props.staffs.errMsg}
+				<TransitionGroup>
+					<CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+						<Switch>
+							<Route
+								exact
+								path="/staffs"
+								component={() => (
+									<StaffList
+										staffs={this.props.staffs.staffs}
+										departments={this.props.departments.departments}
+										postStaff={this.props.postStaff}
+										resetAddStaffModal={this.props.resetAddStaffModal}
+										staffsLoading={this.props.staffs.isLoading}
+										staffsErrMsg={this.props.staffs.errMsg}
+									/>
+								)}
 							/>
-						)}
-					/>
-					<Route path="/staffs/:staffId" component={StaffWithId} />
+							<Route path="/staffs/:staffId" component={StaffWithId} />
 
-					<Route exact path="/departments" component={DepartmentPage} />
-					<Route path="/departments/:departmentId" component={DepartmentWithId} />
+							<Route exact path="/departments" component={DepartmentPage} />
+							<Route path="/departments/:departmentId" component={DepartmentWithId} />
 
-					<Route path="/staffsSalary" component={SalaryPage} />
-				</Switch>
-
+							<Route path="/staffsSalary" component={SalaryPage} />
+						</Switch>
+					</CSSTransition>
+				</TransitionGroup>
 				{/* <Redirect to="/staff" /> */}
 				<Footer />
 			</React.Fragment>

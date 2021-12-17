@@ -1,20 +1,29 @@
 import React from "react";
 
 import { Card, CardImg, CardTitle, Form, Col, FormGroup, Input } from "reactstrap";
-
 import { Link } from "react-router-dom";
+import { FadeTransform } from "react-animation-components";
 
 import AddStaffModal from "./AddStaffModalComponent";
 import { Loading } from "./LoadingComponent";
 
 function RenderStaff({ staff }) {
 	return (
-		<Card className="col-lg-2 col-md-3 col-sm-6">
-			<Link to={`/staffs/${staff.id}`}>
-				<CardImg src={staff.image} width="100%" />
-				<CardTitle className="text-center">{staff.name}</CardTitle>
-			</Link>
-		</Card>
+		<div className="col-lg-2 col-md-3 col-sm-6">
+			<FadeTransform
+				in
+				transformProps={{
+					exitTransform: "scale(0.5) translateY(-50%)",
+				}}
+			>
+				<Card className="mt-2">
+					<Link to={`/staffs/${staff.id}`}>
+						<CardImg src={staff.image} width="100%" />
+						<CardTitle className="text-center">{staff.name}</CardTitle>
+					</Link>
+				</Card>
+			</FadeTransform>
+		</div>
 	);
 }
 class StaffList extends React.Component {
@@ -48,47 +57,51 @@ class StaffList extends React.Component {
 		});
 
 		return (
-			<div className="container-fluid">
-				<div className="row pt-3">
-					<div className="col-lg-4 col-sm-3">
-						<h3>NHÂN VIÊN</h3>
-					</div>
-					{/* Add staff form */}
-					<div className="col-lg-4 col-sm-8">
-						<AddStaffModal
-							staffs={this.props.staffs}
-							departments={this.props.departments}
-							postStaff={this.props.postStaff}
-							resetAddStaffModal={this.props.resetAddStaffModal}
-						/>
+			<React.Fragment>
+				<div className="container-fluid">
+					<div className="row pt-3">
+						{/* Header of staffsList page */}
+						<div className="col-lg-4 col-sm-3">
+							<h3>NHÂN VIÊN</h3>
+						</div>
+						{/* Add staff form */}
+						<div className="col-lg-4 col-sm-8">
+							<AddStaffModal
+								staffs={this.props.staffs}
+								departments={this.props.departments}
+								postStaff={this.props.postStaff}
+								resetAddStaffModal={this.props.resetAddStaffModal}
+							/>
+						</div>
+
+						{/* Find staffs input */}
+						<div className="col-lg-4 col-sm-12">
+							<Form onSubmit={this.handleSearchStaff}>
+								<FormGroup row>
+									<Col>
+										<Input
+											type="text"
+											id="search"
+											name="search"
+											placeholder="Nhập để tìm nhân viên . . ."
+											onChange={this.handleSearchStaff}
+										/>
+									</Col>
+								</FormGroup>
+							</Form>
+						</div>
 					</div>
 
-					{/* Find staffs input */}
-					<div className="col-lg-4 col-sm-12">
-						<Form onSubmit={this.handleSearchStaff}>
-							<FormGroup row>
-								<Col>
-									<Input
-										type="text"
-										id="search"
-										name="search"
-										placeholder="Nhập để tìm nhân viên . . ."
-										onChange={this.handleSearchStaff}
-									/>
-								</Col>
-							</FormGroup>
-						</Form>
+					<hr />
+				</div>
+				<div className="container-fluid">
+					<div className="row g-2">
+						{filteredStaff.map((staff) => {
+							return RenderStaff({ staff });
+						})}
 					</div>
 				</div>
-
-				<hr />
-
-				<div className="row">
-					{filteredStaff.map((staff) => {
-						return RenderStaff({ staff });
-					})}
-				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

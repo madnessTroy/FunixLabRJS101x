@@ -48,7 +48,7 @@ class AddStaffModal extends React.Component {
 		return (
 			<div>
 				<Button className="mb-3" color="primary" onClick={this.toggleModal}>
-					<b className="fs-5"> Thêm nhân viên</b>
+					<b className="fs-5">Thêm nhân viên</b>
 				</Button>
 
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
