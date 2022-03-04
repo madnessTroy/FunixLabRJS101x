@@ -1,28 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { Card, CardImg, CardTitle, Form, Col, FormGroup, Input } from "reactstrap";
-import { Link } from "react-router-dom";
-import { FadeTransform } from "react-animation-components";
+import { Card, CardImg, CardTitle, Form, Col, FormGroup, Input } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-import AddStaffModal from "./AddStaffModalComponent";
-import { Loading } from "./LoadingComponent";
+import AddStaffModal from './AddStaffModalComponent';
+import { Loading } from './LoadingComponent';
 
 function RenderStaff({ staff }) {
 	return (
 		<div className="col-lg-2 col-md-3 col-sm-6">
-			<FadeTransform
-				in
-				transformProps={{
-					exitTransform: "scale(0.5) translateY(-50%)",
-				}}
-			>
-				<Card className="mt-2">
-					<Link to={`/staffs/${staff.id}`}>
-						<CardImg src={staff.image} width="100%" />
-						<CardTitle className="text-center">{staff.name}</CardTitle>
-					</Link>
-				</Card>
-			</FadeTransform>
+			<Card className="mt-2">
+				<Link to={`/staffs/${staff.id}`}>
+					<CardImg src={staff.image} width="100%" />
+					<CardTitle className="text-center">{staff.name}</CardTitle>
+				</Link>
+			</Card>
 		</div>
 	);
 }
@@ -31,7 +23,7 @@ class StaffList extends React.Component {
 		super(props);
 
 		this.state = {
-			search: "",
+			search: '',
 		};
 	}
 

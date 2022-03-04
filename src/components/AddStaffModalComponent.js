@@ -1,7 +1,7 @@
 // General
-import React from "react";
-import { Modal, ModalBody, ModalHeader, Button, Row, Col, Label } from "reactstrap";
-import { Control, LocalForm, Errors } from "react-redux-form";
+import React from 'react';
+import { Modal, ModalBody, ModalHeader, Button, Row, Col, Label } from 'reactstrap';
+import { Control, LocalForm, Errors } from 'react-redux-form';
 
 // validator conditions:
 const required = (val) => val && val.length;
@@ -30,12 +30,12 @@ class AddStaffModal extends React.Component {
 			name: values.name,
 			doB: values.doB,
 			startDate: values.startDate,
-			departmentId: values.department ? values.department : "Dept01",
+			departmentId: values.department ? values.department : 'Dept01',
 			salaryScale: values.salaryScale,
 			annualLeave: values.annualLeave,
 			overTime: values.overTime,
 			salary: salary,
-			image: "/asset/images/alberto.png",
+			image: '/asset/images/alberto.png',
 		};
 		this.props.postStaff(newStaff);
 
@@ -82,9 +82,9 @@ class AddStaffModal extends React.Component {
 										model=".name"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập! |",
-											minLength: " Tối thiểu 3 ký tự",
-											maxLength: " Tối đa 20 ký tự",
+											required: 'Yêu cầu nhập! |',
+											minLength: ' Tối thiểu 3 ký tự',
+											maxLength: ' Tối đa 20 ký tự',
 										}}
 									/>
 								</Col>
@@ -111,7 +111,7 @@ class AddStaffModal extends React.Component {
 										model=".doB"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập! ",
+											required: 'Yêu cầu nhập! ',
 										}}
 									/>
 								</Col>
@@ -138,7 +138,7 @@ class AddStaffModal extends React.Component {
 										model=".startDate"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập! ",
+											required: 'Yêu cầu nhập! ',
 										}}
 									/>
 								</Col>
@@ -187,8 +187,8 @@ class AddStaffModal extends React.Component {
 										className="text-danger"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập! |",
-											isNumber: " Phải là số!",
+											required: 'Yêu cầu nhập! |',
+											isNumber: ' Phải là số!',
 										}}
 									/>
 								</Col>
@@ -214,8 +214,8 @@ class AddStaffModal extends React.Component {
 										className="text-danger"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập số! |",
-											isNumber: " Phải là số!",
+											required: 'Yêu cầu nhập số! |',
+											isNumber: ' Phải là số!',
 										}}
 									/>
 								</Col>
@@ -241,8 +241,8 @@ class AddStaffModal extends React.Component {
 										className="text-danger"
 										show="touched"
 										messages={{
-											required: "Yêu cầu nhập số! |",
-											isNumber: " Phải là số!",
+											required: 'Yêu cầu nhập số! |',
+											isNumber: ' Phải là số!',
 										}}
 									/>
 								</Col>
